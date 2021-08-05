@@ -13,7 +13,6 @@ function PaletteGeneratorComponent() {
       const color3 = randomHexGenerator();
       const color4 = randomHexGenerator();
       const color5 = randomHexGenerator();
-      // const hexColor = color.toString();
       const palette = [];
       palette.push({
         color1: color1.toString(),
@@ -35,7 +34,6 @@ function PaletteGeneratorComponent() {
         const color3 = randomHexGenerator();
         const color4 = randomHexGenerator();
         const color5 = randomHexGenerator();
-        // const hexColor = color.toString();
         const palette = [];
         palette.push({
           color1: color1.toString(),
@@ -79,7 +77,7 @@ function PaletteGeneratorComponent() {
   console.log(palette);
 
   return (
-    <div onKeyDown={handleKeyDown}>
+    <div>
       <h1>Color Palette Generator</h1>
       <ColorCard colors={palette} />
       <button type='button' onClick={handleKeyDown}>
