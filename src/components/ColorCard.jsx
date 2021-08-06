@@ -14,14 +14,15 @@ function ColorCard({ colors }) {
           key={i}
           className='color-card'
         >
-          <div
-            style={{
-              backgroundColor: `${color.color1}`,
-              height: '300px',
-              width: '300px',
-            }}
-          >
-            {color.color1}
+          <div>
+            <div
+              style={{
+                backgroundColor: `${color.color1}`,
+                height: '300px',
+                width: '300px',
+              }}
+            ></div>
+            <p>{color.color1}</p>
           </div>
           <div
             style={{
