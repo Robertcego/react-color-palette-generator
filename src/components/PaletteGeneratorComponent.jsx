@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import colors from '../utils/colorsArray';
+// import colors from '../utils/colorsArray';
 import randomHexGenerator from '../utils/randomHexGenerator';
 import ColorCard from './ColorCard';
 
@@ -80,9 +80,25 @@ function PaletteGeneratorComponent() {
     <div>
       <h1>Color Palette Generator</h1>
       <ColorCard colors={palette} />
-      <button type='button' onClick={handleKeyDown}>
-        Get a new palette
-      </button>
+      <div
+        style={{
+          display: 'flex',
+        }}
+      >
+        <button
+          style={{
+            backgroundColor: '#7E6CCA',
+            color: '#fff',
+            height: '50px',
+            border: 'none',
+          }}
+          type='button'
+          onClick={handleKeyDown}
+        >
+          Get a new palette
+        </button>
+        <span>Click to copy indiviual color ⚫ Press "C" to copy palette</span>
+      </div>
     </div>
   );
 }

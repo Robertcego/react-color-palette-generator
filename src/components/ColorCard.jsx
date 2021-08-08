@@ -24,41 +24,45 @@ function ColorCard({ colors }) {
             ></div>
             <p>{color.color1}</p>
           </div>
-          <div
-            style={{
-              backgroundColor: `${color.color2}`,
-              height: '300px',
-              width: '300px',
-            }}
-          >
-            {color.color2}
+          <div>
+            <div
+              style={{
+                backgroundColor: `${color.color2}`,
+                height: '300px',
+                width: '300px',
+              }}
+            ></div>
+            <p>{color.color2}</p>
           </div>
-          <div
-            style={{
-              backgroundColor: `${color.color3}`,
-              height: '300px',
-              width: '300px',
-            }}
-          >
-            {color.color3}
+          <div>
+            <div
+              style={{
+                backgroundColor: `${color.color3}`,
+                height: '300px',
+                width: '300px',
+              }}
+            ></div>
+            <p>{color.color3}</p>
           </div>
-          <div
-            style={{
-              backgroundColor: `${color.color4}`,
-              height: '300px',
-              width: '300px',
-            }}
-          >
-            {color.color4}
+          <div>
+            <div
+              style={{
+                backgroundColor: `${color.color4}`,
+                height: '300px',
+                width: '300px',
+              }}
+            ></div>
+            <p>{color.color4}</p>
           </div>
-          <div
-            style={{
-              backgroundColor: `${color.color5}`,
-              height: '300px',
-              width: '300px',
-            }}
-          >
-            {color.color5}
+          <div>
+            <div
+              style={{
+                backgroundColor: `${color.color5}`,
+                height: '300px',
+                width: '300px',
+              }}
+            ></div>
+            <p>{color.color5}</p>
           </div>
         </div>
       ))}
