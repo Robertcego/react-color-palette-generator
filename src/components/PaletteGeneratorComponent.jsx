@@ -77,7 +77,15 @@ function PaletteGeneratorComponent() {
   console.log(palette);
 
   return (
-    <div>
+    <div
+      style={{
+        width: '100vw',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <h1>Color Palette Generator</h1>
       <ColorCard colors={palette} />
       <div
@@ -85,19 +93,39 @@ function PaletteGeneratorComponent() {
           display: 'flex',
         }}
       >
-        <button
+        <div
           style={{
-            backgroundColor: '#7E6CCA',
-            color: '#fff',
-            height: '50px',
-            border: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
-          type='button'
-          onClick={handleKeyDown}
         >
-          Get a new palette
-        </button>
-        <span>Click to copy indiviual color ⚫ Press "C" to copy palette</span>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <button
+              style={{
+                backgroundColor: '#7E6CCA',
+                color: '#fff',
+                height: '90px',
+                border: 'none',
+                borderRadius: '5px',
+                width: '300px',
+              }}
+              type='button'
+              onClick={handleKeyDown}
+            >
+              Generate Palette
+            </button>
+            <p>Click to copy indiviual color ⚫ Press "C" to copy palette</p>
+          </div>
+        </div>
       </div>
     </div>
   );
