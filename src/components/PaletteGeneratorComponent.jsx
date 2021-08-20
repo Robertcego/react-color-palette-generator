@@ -4,48 +4,33 @@ import randomHexGenerator from '../utils/randomHexGenerator';
 import ColorCard from './ColorCard';
 
 function PaletteGeneratorComponent() {
-  const [palette, setPalette] = useState([]);
-  console.log(colors.map((c) => c));
-
-  useEffect(() => {
-    // const generatePalette = () => {
-    //   const color1 = randomHexGenerator();
-    //   const color2 = randomHexGenerator();
-    //   const color3 = randomHexGenerator();
-    //   const color4 = randomHexGenerator();
-    //   const color5 = randomHexGenerator();
-    //   const palette = [];
-    //   palette.push({
-    //     color1: color1.toString(),
-    //     color2: color2.toString(),
-    //     color3: color3.toString(),
-    //     color4: color4.toString(),
-    //     color5: color5.toString(),
-    //   });
-    setPalette(colors);
-    // };
-    // generatePalette();
-  }, []);
+  const [palette, setPalette] = useState(colors);
 
   const keyPress = useCallback((e) => {
     if (e.keyCode === 32) {
-      // const generatePalette = () => {
-      //   const color1 = randomHexGenerator();
-      //   const color2 = randomHexGenerator();
-      //   const color3 = randomHexGenerator();
-      //   const color4 = randomHexGenerator();
-      //   const color5 = randomHexGenerator();
-      //   const palette = [];
-      //   palette.push({
-      //     color1: color1.toString(),
-      //     color2: color2.toString(),
-      //     color3: color3.toString(),
-      //     color4: color4.toString(),
-      //     color5: color5.toString(),
-      //   });
+      const colors = [
+        {
+          id: 1,
+          color: randomHexGenerator(),
+        },
+        {
+          id: 2,
+          color: randomHexGenerator(),
+        },
+        {
+          id: 3,
+          color: randomHexGenerator(),
+        },
+        {
+          id: 4,
+          color: randomHexGenerator(),
+        },
+        {
+          id: 5,
+          color: randomHexGenerator(),
+        },
+      ];
       setPalette(colors);
-      // };
-      // generatePalette();
     }
   }, []);
 
@@ -55,27 +40,30 @@ function PaletteGeneratorComponent() {
   }, [keyPress]);
 
   const handleKeyDown = (event) => {
-    // const generatePalette = () => {
-    //   const color1 = randomHexGenerator();
-    //   const color2 = randomHexGenerator();
-    //   const color3 = randomHexGenerator();
-    //   const color4 = randomHexGenerator();
-    //   const color5 = randomHexGenerator();
-    //   // const hexColor = color.toString();
-    //   const palette = [];
-    //   palette.push({
-    //     color1: color1.toString(),
-    //     color2: color2.toString(),
-    //     color3: color3.toString(),
-    //     color4: color4.toString(),
-    //     color5: color5.toString(),
-    //   });
+    const colors = [
+      {
+        id: 1,
+        color: randomHexGenerator(),
+      },
+      {
+        id: 2,
+        color: randomHexGenerator(),
+      },
+      {
+        id: 3,
+        color: randomHexGenerator(),
+      },
+      {
+        id: 4,
+        color: randomHexGenerator(),
+      },
+      {
+        id: 5,
+        color: randomHexGenerator(),
+      },
+    ];
     setPalette(colors);
-    // };
-    // generatePalette();
   };
-
-  // console.log(palette);
 
   return (
     <div
@@ -88,7 +76,7 @@ function PaletteGeneratorComponent() {
       }}
     >
       <h1>Color Palette Generator</h1>
-      <ColorCard colors={colors} />
+      <ColorCard colors={palette} />
       <div
         style={{
           display: 'flex',
