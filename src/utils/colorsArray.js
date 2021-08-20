@@ -3,11 +3,24 @@ import randomHexGenerator from './randomHexGenerator';
 
 const colors = [
   {
-    color1: randomHexGenerator(),
-    color2: randomHexGenerator(),
-    color3: randomHexGenerator(),
-    color4: randomHexGenerator(),
-    color5: randomHexGenerator(),
+    id: 1,
+    color: randomHexGenerator(),
+  },
+  {
+    id: 2,
+    color: randomHexGenerator(),
+  },
+  {
+    id: 3,
+    color: randomHexGenerator(),
+  },
+  {
+    id: 4,
+    color: randomHexGenerator(),
+  },
+  {
+    id: 5,
+    color: randomHexGenerator(),
   },
 ];
 
