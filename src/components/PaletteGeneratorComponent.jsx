@@ -3,10 +3,13 @@ import colors from '../utils/colorsArray';
 import randomHexGenerator from '../utils/randomHexGenerator';
 import ColorCard from './ColorCard';
 
+import './PaletteGeneratorComponent.component.css';
+
 function PaletteGeneratorComponent() {
   const [palette, setPalette] = useState(colors);
 
   const keyPress = useCallback((e) => {
+    e.preventDefault();
     if (e.keyCode === 32) {
       const colors = [
         {
@@ -39,7 +42,8 @@ function PaletteGeneratorComponent() {
     return () => document.removeEventListener('keydown', keyPress);
   }, [keyPress]);
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (e) => {
+    e.preventDefault();
     const colors = [
       {
         id: 1,
@@ -66,48 +70,14 @@ function PaletteGeneratorComponent() {
   };
 
   return (
-    <div
-      style={{
-        width: '100vw',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <div className='palette-container'>
       <h1>Color Palette Generator</h1>
       <ColorCard colors={palette} />
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+      <div className='main-container'>
+        <div className='wrapper__'>
+          <div className='content-wrapper'>
             <button
-              style={{
-                backgroundColor: '#7E6CCA',
-                color: '#fff',
-                height: '90px',
-                border: 'none',
-                borderRadius: '5px',
-                width: '400px',
-                fontSize: '0.8em',
-              }}
+              className='generator-btn'
               type='button'
               onClick={handleKeyDown}
             >
