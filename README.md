@@ -5,7 +5,7 @@ Find the project requirements here: [Random color palette generator web app](htt
 
 ## Tech/framework used
 
-Built with \_\_\_
+Built with React
 
 ## Screenshots and demo
 
