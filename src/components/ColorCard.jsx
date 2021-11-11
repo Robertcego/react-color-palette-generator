@@ -10,7 +10,7 @@ function ColorCard({ colors }) {
   const setCopyValue = (e) => {
     if (e.currentTarget.id) {
       setValue(e.target.value);
-      setCopied(true);
+      setCopied(false);
     }
     console.log(e.target.value);
     console.log(e.target.id);
@@ -30,7 +30,7 @@ function ColorCard({ colors }) {
                 borderRadius: '0.8rem',
               }}
             ></div>
-            <CopyToClipboard text={value} onCopy={setCopyValue}>
+            <CopyToClipboard text={value} onCopy={() => setCopied(true)}>
               <span onClick={setCopyValue} id={uuid()} value={color.color}>
                 {color.color}
               </span>
