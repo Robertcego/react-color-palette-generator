@@ -14,7 +14,7 @@ Built with React
 ## Screenshots and demo
 
 Live demo: https://react-color-palette-generator-9cpcnuefg-robertcego.vercel.app/
-Powered by Vercel
+#### Powered by Vercel
 
 ## Installation
 
