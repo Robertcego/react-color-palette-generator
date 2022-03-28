@@ -19,6 +19,7 @@ Live demo: https://react-color-palette-generator-9cpcnuefg-robertcego.vercel.app
 ## Installation
 
  -Fork this repo
+ 
  -Create a copy on your local environment:
   ```npm
   git clone <link>
